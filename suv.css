@@ -6,20 +6,18 @@ body {
   background: lightblue;
   animation: sunrise 5s;
 }
-@keyframes rotateCar {
-  0% { transform: rotate(0) translateY(0px); }
-  50% { transform: rotate(90deg) translate(200px); }
-  100% { transform: rotate(90deg) translate(600px); }
-/*   100% { from {position: absolute; bottom: 450px;}
-    to {position: absolute; bottom: 0px;} } */
+@keyframes fallingCar {
+  from { transform: rotate(0) translate3d(0, 0, 0); }
+  to { transform: rotate(90deg) translate3d(900px, 600px, 0); }
 }
 .body {
   width: 200px;
   margin: 0 auto;
   position: relative;
-  animation: rotateCar 4s linear 4s;
+  animation: fallingCar 3s cubic-bezier(.73,.05,.99,.33) 4s;
   animation-fill-mode: forwards;
   z-index: 1;
+/*   cubic-bezier(.5,0.05,1,.5) cubic-bezier(x1, y1, x2, y2)*/
 }
 .container {
   display: inline-flex;
@@ -169,7 +167,7 @@ span {
   100% { transform: translate(-500px); }
 }
 .container.tree-wrap {
-  animation: moveTree 3s linear;
+  animation: moveTree 4s linear;
   animation-fill-mode: forwards;
   z-index: -5;
 }
