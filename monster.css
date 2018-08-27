@@ -1,0 +1,145 @@
+body {
+  background: #ffc1b5;
+}
+h1 {
+  font-family: 'Indie Flower', cursive;
+  font-size: 60px;
+  color: #C51D56;
+  text-align: center;
+  margin-bottom: 50px;
+}
+@keyframes bounce {
+  from { transform: translate3d(0, 0, 0);     }
+  to   { transform: translate3d(0, 200px, 0); }
+}
+.container {
+  margin: 0 50%;
+  width: 0%;
+  display: inline-flex;
+  flex-direction: row;
+  animation: bounce 2s ease;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+.cone-head-top {
+  width: 20px;
+  height: 20px;
+  border-radius: 10% 100% 60% 100%;
+  border: 3px solid #c55829;
+  background: #c55829;
+  transform: rotate(45deg);
+  position: absolute;
+  margin: auto;
+}
+.eye {
+  width: 25px;
+  height: 25px;
+  background: #C51D56;
+  border-radius: 50%;
+  margin-top: 50px;
+  box-shadow: 0px 0px 0px 7px white;
+  animation: blink 3s infinite step-start 0s;
+}
+@keyframes blink {
+  0%, 100% {
+    background: white;
+  }
+
+  5%, 95% {
+    background: #C51D56;
+   }
+}
+.eye-glare {
+  width: 7px;
+  height: 7px;
+  background: white;
+  border-radius: 50%;
+  margin-top: 55px;
+  margin-left: -10px;
+}
+.eye-glare-small {
+  width: 4px;
+  height: 4px;
+  background: white;
+  border-radius: 50%;
+  margin-top: 65px;
+  margin-left: -5px;
+}
+.head {
+  width: 100px;
+  height: 200px;
+  background: #1B2D6E;
+  border-radius: 50% 50% 10% 10%;
+  margin-top: 20px;
+  margin-left: -60px;
+  z-index: -1;
+}
+.mouth {
+  width: 40px;
+  height: 40px;
+  background:#F0932F;
+  border-radius: 80% 10% 10% 20%;
+  margin-left: -85px;
+  margin-top: 100px;
+}
+.mouth:after {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background:#F0932F;
+  border-radius: 80% 10% 10% 20%;
+  transform: rotate(90deg) translate(0px, -30px);
+}
+.tooth-right {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 20px solid white;
+  transform: rotate(35deg);
+  margin-top: 105px;
+}
+.tooth-left {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 20px solid white;
+  transform: rotate(-35deg);
+  margin-top: 105px;
+  margin-left: -50px;
+}
+.leg-right {
+  width: 30px;
+  height: 60px;
+  border-radius: 0% 50% 10% 10%;
+  background: #1B2D6E;
+  margin-top: 200px;
+  margin-left: 40px;
+}
+.leg-left {
+  width: 30px;
+  height: 60px;
+  border-radius: 50% 0% 10% 10%;
+  background: #1B2D6E;
+  margin-top: 200px;
+  margin-left: -130px;
+}
+.arm {
+  background-color: #1B2D6E;
+  position: absolute;
+  height: 100px;
+  width: 30px;
+  border-radius: 35%;
+  top: 90px;
+  z-index: -1;
+}
+.arm.left {
+  margin-left: -80px;
+  transform: rotate(130deg);
+}
+.arm.right {
+  margin-left: 70px;
+  transform: rotate(-130deg);
+}
